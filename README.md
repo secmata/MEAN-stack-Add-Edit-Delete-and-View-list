@@ -10,4 +10,6 @@ http://expressjs.com/starter/installing.html
 #####remove favicon
 * npm rm serve-favicon --save
 >app.js
+```
 //var favicon = require('serve-favicon');
+```
