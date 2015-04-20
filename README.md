@@ -6,7 +6,6 @@ http://expressjs.com/starter/installing.html
 * npm install express --save
 * express . --hbs
 * npm install
-* 
 ######//remove favicon
 * npm rm serve-favicon --save
 ```
