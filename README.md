@@ -111,7 +111,7 @@ router.get('/', function(req, res, next) {
 
 module.exports = router;
 ```
-######//TEST ANGULARJS CONNECTION IN NODE.JS ROUTE
+####7TEST ANGULARJS CONNECTION IN NODE.JS ROUTE
 ```
 >public>javascripts>test>test.js
 
