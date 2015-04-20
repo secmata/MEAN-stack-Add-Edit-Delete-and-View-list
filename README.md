@@ -4,15 +4,16 @@
 http://expressjs.com/starter/installing.html
 * npm init
 * npm install express --save
-* express . --hbs
+* express . --hbs 
 * npm install
+
 ######//remove favicon
 * npm rm serve-favicon --save
 ```
 >app.js
 //var favicon = require('serve-favicon');
 ```
-######run application to test if no error
+######//run application to test if no error
 * node app.js
 * DEBUG=test:* ./bin/www
 * DEBUG=test /bin/www
@@ -60,8 +61,10 @@ http://expressjs.com/starter/installing.html
 ```
 ####4 INSTALL BOOTSTRAP
 * bower install bootstrap
-######>view>layout.js
+
 ```
+>view>layout.js
+
 <link rel='stylesheet' href='/bower/bootstrap/dist/css/bootstrap.min.css' />
 <link rel='stylesheet' href='/bower/bootstrap/dist/css/bootstrap-theme.min.css' />
 ```
@@ -108,7 +111,7 @@ router.get('/', function(req, res, next) {
 
 module.exports = router;
 ```
-#### TEST ANGULARJS CONNECTION IN NODE.JS ROUTE
+######//TEST ANGULARJS CONNECTION IN NODE.JS ROUTE
 ```
 >public>javascripts>test>test.js
 
@@ -144,9 +147,10 @@ router.get('/', function(req, res, next) {
 });
 
 ```
-######ANGULARJS GET DATA FROM NODE
+######//ANGULARJS GET DATA FROM NODE
 ```
 >public>javascripts>test>test.js
+
 .controller('AppCtrl', ['$scope', '$http', function($scope, $http) {
             $http.get('/test').success(function(response){
             	console.log('success request');
