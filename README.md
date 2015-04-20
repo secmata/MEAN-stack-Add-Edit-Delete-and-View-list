@@ -33,28 +33,33 @@ http://expressjs.com/starter/installing.html
 * bower install angular-route
 
 ```
->view>index.hbs
+>view>index.ejs
 
-<div ng-app="myApp">
-	<div ng-controller="AppCtrl">
-		<input ng-model="test">
-		{[{test}]}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div ng-app="myApp">
+		<div ng-controller="AppCtrl">
+			<input ng-model="test">
+			{[{test}]}
+		</div>
 	</div>
-</div>
-<script src="/bower/angular/angular.min.js"></script>
-<script src="/bower/angular-route/angular-route.min.js"></script>
-<script src="/javascripts/test/test.js"></script>
+	<script src="/bower/angular/angular.min.js"></script>
+	<script src="/bower/angular-route/angular-route.min.js"></script>
+	<script src="/javascripts/app/test.js"></script>
+  </body>
+</html>
 ```
 
 ```
->public>javascripts>test>test.js
+>public>javascripts>app>test.js
 
 (function(){
 	angular.module('myApp', [])
-        .config(function($interpolateProvider) {
-          $interpolateProvider.startSymbol('{[{');
-          $interpolateProvider.endSymbol('}]}');
-        })
     	.controller('AppCtrl', ['$scope', '$http', function($scope, $http) {
             $scope.test = 'sample';
         }]);
