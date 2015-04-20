@@ -68,7 +68,7 @@ http://expressjs.com/starter/installing.html
 * bower install bootstrap
 
 ```
->view>layout.js
+>view>index.ejs
 
 <link rel='stylesheet' href='/bower/bootstrap/dist/css/bootstrap.min.css' />
 <link rel='stylesheet' href='/bower/bootstrap/dist/css/bootstrap-theme.min.css' />
@@ -100,6 +100,7 @@ https://www.mongodb.org/downloads
 >app.js
 
 var test = require('./routes/test');
+
 app.use('/test', test);
 ```
 
@@ -116,9 +117,9 @@ router.get('/', function(req, res, next) {
 
 module.exports = router;
 ```
-####7TEST ANGULARJS CONNECTION IN NODE.JS ROUTE
+####7 TEST ANGULARJS CONNECTION IN NODE.JS ROUTE
 ```
->public>javascripts>test>test.js
+>public>javascripts>app>test.js
 
 .controller('AppCtrl', ['$scope', '$http', function($scope, $http) {
 	$http.get('/test').success(function(response){
