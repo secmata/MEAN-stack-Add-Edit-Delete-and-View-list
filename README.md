@@ -39,13 +39,12 @@ http://expressjs.com/starter/installing.html
 <html>
   <head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
     <div ng-app="myApp">
 		<div ng-controller="AppCtrl">
 			<input ng-model="test">
-			{[{test}]}
+			{{test}}
 		</div>
 	</div>
 	<script src="/bower/angular/angular.min.js"></script>
