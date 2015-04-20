@@ -4,7 +4,7 @@ https://nodejs.org/
 http://expressjs.com/starter/installing.html
 * npm init
 * npm install express --save
-* express . --hbs 
+* express . --ejs 
 * npm install
 
 ######//remove favicon
