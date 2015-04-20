@@ -11,6 +11,7 @@ http://expressjs.com/starter/installing.html
 * npm rm serve-favicon --save
 ```
 >app.js
+
 //var favicon = require('serve-favicon');
 ```
 ######//run application to test if no error
