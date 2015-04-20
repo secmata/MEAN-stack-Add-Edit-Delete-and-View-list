@@ -2,13 +2,12 @@
 
 ####2 INSTALL EXPRESS 
 http://expressjs.com/starter/installing.html
-
 * npm init
 * npm install express --save
 * express . --hbs
 * npm install
-
-//remove favicon
+* 
+######//remove favicon
 * npm rm serve-favicon --save
 ```
 >app.js
@@ -22,19 +21,19 @@ http://expressjs.com/starter/installing.html
 
 ####3 INSTALL ANGULARJS
 
-//create file .bowerrc
+######//create file .bowerrc
 ```
 {
   "directory": "public/bower"
 }
 ```
-
 * npm install bower -g
 * bower install angular
 * bower install angular-route
 
->view>index.hbs
 ```
+>view>index.hbs
+
 <div ng-app="myApp">
 	<div ng-controller="AppCtrl">
 		<input ng-model="test">
@@ -45,8 +44,10 @@ http://expressjs.com/starter/installing.html
 <script src="/bower/angular-route/angular-route.min.js"></script>
 <script src="/javascripts/test/test.js"></script>
 ```
->public>javascripts>test>test.js
+
 ```
+>public>javascripts>test>test.js
+
 (function(){
 	angular.module('myApp', [])
         .config(function($interpolateProvider) {
@@ -60,44 +61,44 @@ http://expressjs.com/starter/installing.html
 ```
 ####4 INSTALL BOOTSTRAP
 * bower install bootstrap
->view>layout.js
+######>view>layout.js
 ```
 <link rel='stylesheet' href='/bower/bootstrap/dist/css/bootstrap.min.css' />
 <link rel='stylesheet' href='/bower/bootstrap/dist/css/bootstrap-theme.min.css' />
 ```
 ####5 INSTALL MONGODB
-
-//download mongdb
+######//download mongdb
 https://www.mongodb.org/downloads
-//run mongodb
+######//run mongodb
 * cd D:\mongo\bin
 * mongod
 
-//modify mongodb
+######//modify mongodb
 * cd D:\mongo\bin
 * mongo
 
-//show all db
+######//show all db
 * show dbs
 
-//switch db
+######//switch db
 * use test
 
-
-//insert data
-
+######//insert data
 * db.test.insert({name: 'Tom', email: 'tom@testemail.com', number: '(444)444-4444'})
 * db.test.find().pretty()
 
 
 ####6 ROUTING
->app.js
 ```
+>app.js
+
 var test = require('./routes/test');
 app.use('/test', test);
 ```
->routes>test.js
+
 ```
+>routes>test.js
+
 var express = require('express');
 var router = express.Router();
 
@@ -109,16 +110,19 @@ router.get('/', function(req, res, next) {
 module.exports = router;
 ```
 #### TEST ANGULARJS CONNECTION IN NODE.JS ROUTE
->public>javascripts>test>test.js
 ```
+>public>javascripts>test>test.js
+
 .controller('AppCtrl', ['$scope', '$http', function($scope, $http) {
 	$http.get('/test').success(function(response){
         	console.log('success request');
         });
 }]);
 ```
->routes>test.js
+
 ```
+>routes>test.js
+
 router.get('/', function(req, res, next) {
   	console.log('get request');
 });
@@ -127,6 +131,7 @@ router.get('/', function(req, res, next) {
 * npm install mongojs
 ```
 >routes>test.js
+
 var mongojs = require('mongojs');
 var db = mongojs('test', ['test']);
 
@@ -184,8 +189,8 @@ router.get('/', function(req, res, next) {
 	</div>
 </div>
 ```
-####10 VIEW, ADD, EDIT, UPDATE, DELETE
 
+####10 VIEW, ADD, EDIT, UPDATE, DELETE
 * npm install body-parser
 ```
 var bodyParser = require('body-parser');
