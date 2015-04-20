@@ -10,11 +10,11 @@ http://expressjs.com/starter/installing.html
 
 //remove favicon
 * npm rm serve-favicon --save
->app.js
 ```
+>app.js
 //var favicon = require('serve-favicon');
 ```
-//run application to test if no error
+######run application to test if no error
 * node app.js
 * DEBUG=test:* ./bin/www
 * DEBUG=test /bin/www
@@ -59,7 +59,7 @@ http://expressjs.com/starter/installing.html
 })();
 ```
 ####4 INSTALL BOOTSTRAP
-$ bower install bootstrap
+* bower install bootstrap
 >view>layout.js
 ```
 <link rel='stylesheet' href='/bower/bootstrap/dist/css/bootstrap.min.css' />
