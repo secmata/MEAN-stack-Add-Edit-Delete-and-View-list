@@ -109,7 +109,6 @@ router.get('/', function(req, res, next) {
 module.exports = router;
 ```
 #### TEST ANGULARJS CONNECTION IN NODE.JS ROUTE
-
 >public>javascripts>test>test.js
 ```
 .controller('AppCtrl', ['$scope', '$http', function($scope, $http) {
@@ -125,11 +124,9 @@ router.get('/', function(req, res, next) {
 });
 ```
 ####8 CONNECT NODE.JS IN MONGODB USING MONGOJS
-
 * npm install mongojs
-
->routes>test.js
 ```
+>routes>test.js
 var mongojs = require('mongojs');
 var db = mongojs('test', ['test']);
 
@@ -142,8 +139,9 @@ router.get('/', function(req, res, next) {
     	});	
 });
 
-
-ANGULARJS GET DATA FROM NODE
+```
+######ANGULARJS GET DATA FROM NODE
+```
 >public>javascripts>test>test.js
 .controller('AppCtrl', ['$scope', '$http', function($scope, $http) {
             $http.get('/test').success(function(response){
@@ -151,11 +149,9 @@ ANGULARJS GET DATA FROM NODE
             	console.log(response);
             });
 }]);
-
-
+```
 ####9 CREATE LAYOUT
-
-
+```
 <div ng-app="myApp">
 	<div class="container" ng-controller="AppCtrl">
 		<table class="table">
@@ -240,7 +236,8 @@ $scope.update = function() {
 $scope.deselect = function() {
 	$scope.testdata = "";
 }
-
+```
+```
 >routes>test.js
 
 router.post('/', function(req, res){
