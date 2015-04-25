@@ -136,7 +136,7 @@ router.get('/', function(req, res, next) {
 });
 ```
 ####8 CONNECT NODE.JS IN MONGODB USING MONGOJS
-* npm install mongojs
+* npm install mongojs --save
 ```
 >routes>test.js
 
